@@ -134,9 +134,6 @@ export default function Resister() {
                   </div>
                   
                 </div>
-  
-               
-  
                 <div className="mt-4 pt-2">
                  <button onClick={post1} type='submit' className='btn btn-outline-warning text-center'>Submit</button>
                 </div>

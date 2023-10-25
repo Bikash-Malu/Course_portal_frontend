@@ -79,7 +79,7 @@ const Login = (props) => {
               </div>
               <label className="form-label" >Password</label>
               <div className="form-outline form-white mb-4">
-                <input type="password" id="typePasswordX" className="form-control form-control-lg" name='password' onChange={event=>setvalue(prev=>({...prev,password:event.target.value}))} placeholder='enter youe password' />
+                <input type="password" id="typePasswordX" className="form-control form-control-lg" name='password' onChange={event=>setvalue(prev=>({...prev,password:event.target.value}))} placeholder='enter your password' />
                 
               </div>
 

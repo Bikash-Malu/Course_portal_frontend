@@ -8,9 +8,9 @@
     
   }
   .main:hover{
-   
-    transform: rotateY(360deg);
-    transition: 2.5s;
+    border: 2px solid rgb(154, 147, 147);
+    /* transform: rotateY(360deg); */
+    /* transition: 2.5s; */
     
   }
   #feather{

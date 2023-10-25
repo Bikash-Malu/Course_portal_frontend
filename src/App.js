@@ -15,6 +15,7 @@ import Dabout from './Components/Dashboard/Dabout';
 import Registration from './Components/Dashboard/Registration';
 import Changepass from './Components/Dashboard/Changepass';
 import Logout from './Components/Dashboard/Logout';
+import Desc from './Components/Dashboard/Desc';
 
 // import Login from './Components/Login';
 function App() {
@@ -43,6 +44,7 @@ function App() {
     <Route path="/dregistration" element={<Registration title="dashbaord"/>}/>
     <Route path="/dpassword" element={<Changepass title="dashbaord"/>}/>
     <Route path="/dlogout" element={<Logout title="dashbaord"/>}/>
+    <Route path="/desc/:name" element={<Desc title="dascription"/>}/>
   
     </Routes>
     {/* <Footer/> */}
