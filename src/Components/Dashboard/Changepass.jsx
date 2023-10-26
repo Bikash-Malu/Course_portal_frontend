@@ -25,14 +25,14 @@ Swal.fire('check your email')
     <div style={{display:'flex'}}>
       <Sidebar/>
       <div>
-      <div class="container mt-5" style={{marginLeft:"500px",width:"1000px"}}>
+      <div class="container mt-5" style={{marginLeft:"500px",width:"1000px",fontSize:'10px'}}>
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
             <div class="panel panel-default">
               <div class="panel-body">
                 <div class="text-center">
                   <h3><i class="fa fa-lock fa-4x"></i></h3>
-                  <h2 class="text-center">update Password?</h2>
+                  <h3 class="text-center">update Password?</h3>
                   <p>You can reset your password here.</p>
                   <div class="panel-body">
     

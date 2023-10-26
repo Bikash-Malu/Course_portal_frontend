@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Swal from 'sweetalert2'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { signInWithEmailAndPassword} from 'firebase/auth'
 import { auth } from './firebaseconfig'
 const Login = (props) => {
@@ -87,7 +89,7 @@ const Login = (props) => {
 <h5>{errormsg}</h5>
             <button disabled={submitdisable} className="btn btn-outline-light btn-lg px-5" type='submit'> Login </button>
 
-              
+              <ToastContainer></ToastContainer>
 
             </div>
 

@@ -16,11 +16,14 @@ import Registration from './Components/Dashboard/Registration';
 import Changepass from './Components/Dashboard/Changepass';
 import Logout from './Components/Dashboard/Logout';
 import Desc from './Components/Dashboard/Desc';
+import { useGlobalContext } from './Components/Dashboard/context';
+import Search from './Components/Dashboard/Search';
 
 // import Login from './Components/Login';
 function App() {
+
   return (
-   
+   <>
     <Router>
     {/* <Navbar/> */}
 
@@ -45,10 +48,12 @@ function App() {
     <Route path="/dpassword" element={<Changepass title="dashbaord"/>}/>
     <Route path="/dlogout" element={<Logout title="dashbaord"/>}/>
     <Route path="/desc/:name" element={<Desc title="dascription"/>}/>
+    <Route path="/search" element={<Search/>}/>
   
     </Routes>
     {/* <Footer/> */}
     </Router>
+    </>
   );
 }
 export default App;
