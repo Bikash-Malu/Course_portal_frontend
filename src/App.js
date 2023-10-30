@@ -18,6 +18,7 @@ import Logout from './Components/Dashboard/Logout';
 import Desc from './Components/Dashboard/Desc';
 import { useGlobalContext } from './Components/Dashboard/context';
 import Search from './Components/Dashboard/Search';
+import Dashboard from './Components/AdminDashboard/Dashboard';
 
 // import Login from './Components/Login';
 function App() {
@@ -49,6 +50,7 @@ function App() {
     <Route path="/dlogout" element={<Logout title="dashbaord"/>}/>
     <Route path="/desc/:name" element={<Desc title="dascription"/>}/>
     <Route path="/search" element={<Search/>}/>
+    <Route path="/bikash" element={<Dashboard/>}/>
   
     </Routes>
     {/* <Footer/> */}

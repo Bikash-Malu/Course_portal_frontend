@@ -7,16 +7,45 @@ import Pagination from './Pagination'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Registration = (e) => {
-  const notify = () =>toast("Selected the course")
+  const [checked, setChecked] = useState(false);
+  
+  const handleChange = (e) => {
+   
+    setChecked(e.target.checked);
+    // e.preventDefault();
+
+    if (e.target.checked) {
+      toast('selected', {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+          // e.preventDefault();
+     
+    }
+  };
+
+
+  // const handleChange = () =>toast('selected', {
+  //   position: "top-right",
+  //   autoClose: 1000,
+  //   hideProgressBar: false,
+  //   closeOnClick: true,
+  //   pauseOnHover: true,
+  //   draggable: true,
+  //   progress: undefined,
+  //   theme: "light",
+  //   });
+  
+ 
+  
   // e.preventDefault();
-  const[text2,settext]=useState(false)
- let text1;
- if(text2===true){
-  text1="seleced"
- }
- else{
-  text1="add"
- }
+
  const{hits,nbpages,isloading}=useGlobalContext();
   if(isloading){
     return(
@@ -42,9 +71,10 @@ const Registration = (e) => {
             <h5>course code:-{objectID}</h5>
             <p>faculty name:- {author}</p>
             <div className="card-button">
-              <a href={url} target='_blank'>Read more</a> 
+              <a href={url} target='_blank'  style={{color:'red'}}>Read more</a> 
+             
 
-            <input class="form-check-input" type="checkbox"  style={{color:'black'}} id="flexCheckDefault"onChange={()=>settext(!text2)} onClick={notify}/>
+            <input class="form-check-input" type="checkbox" checked={checked}  style={{color:'black'}} id="flex" onChange={handleChange} />
             </div>
           </div>
           <ToastContainer/>

@@ -3,7 +3,7 @@ import "./Navbar.css"
 import { Link } from 'react-router-dom'
 export default function Navbar() {
   return (
-    <header class="header-area header-sticky" style={{marginTop:'-45px',backgroundColor:'black',opacity:'100%'}}>
+    <header class="header-area header-sticky" style={{marginTop:'-45px',background:'linear-gradient(to bottom, #4b6cb7 50%, #000000 90%)'}}>
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -27,7 +27,7 @@ export default function Navbar() {
                         <li ><Link to='/login'>Login</Link></li> 
                         <li ><Link to='/signup'>Sign up</Link></li> 
                     </ul>        
-                    <a class='menu-trigger'>
+                    <a className='menu-trigger' href=''>
                         <span>Menu</span>
                     </a>
                    

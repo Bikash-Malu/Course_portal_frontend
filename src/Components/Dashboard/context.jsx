@@ -4,7 +4,7 @@ import reducer from "./reducer";
 let api="http://hn.algolia.com/api/v1/search?";
 const initial={
     isloading:false,
-    query:"RAECT",
+    query:"REACT",
     nbpages:0,
     page:0,
     hits:[],

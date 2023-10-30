@@ -2,8 +2,21 @@ import React from 'react'
 import Sidebar from '../Sidebar'
 import { Link } from 'react-router-dom'
 
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Logout = () => {
+  function main(){
+    toast('logout succesfully', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
 
   return (
     <div style={{display:'flex'}}>
@@ -15,8 +28,8 @@ const Logout = () => {
             <h4 className='text-center mt-4'>Are you want to logout?</h4><br></br>
             <div style={{marginLeft:"10px"}}>
           <Link to='/dhome'> <button className='btn btn-primary mx-4' >Cancel</button></Link> 
-           <Link to='/login'> <button className='btn btn-danger mx-4' >Logout</button></Link>
-           
+           <button className='btn btn-danger mx-4'onClick={main} ><a href="/Login">Logout</a></button>
+           <ToastContainer/>
            </div>
           </div>
         </div>

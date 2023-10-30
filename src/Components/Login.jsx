@@ -3,8 +3,6 @@ import { Link, useNavigate } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Swal from 'sweetalert2'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { signInWithEmailAndPassword} from 'firebase/auth'
 import { auth } from './firebaseconfig'
 const Login = (props) => {
@@ -37,7 +35,7 @@ const Login = (props) => {
     )
     signInWithEmailAndPassword(auth,value.email,value.password).then(async()=>{
       setsubmitdisable(false);
-      navigate1('/dashboard');
+      navigate1('/dhome');
       e.preventDefault();
       
     }).catch((err)=>{setsubmitdisable(false)
@@ -60,21 +58,19 @@ const Login = (props) => {
 
   return (
     <div>
-        <form className='h-50' style={{height:'100px'}} onSubmit={handelsubmit}>
+        <form className='h-50 mt-2'onSubmit={handelsubmit}>
       <section className="h-50 gradient-custom mt-5"style={{height:"300px",background:"linear-gradient(to right,bisque,pink,bisque,#FDE5D4)"}}>
         <Navbar/>
       <title>{props.title}</title>
-  <div className="container py-5 h-70">
-    <div className="row d-flex justify-content-center align-items-center h-50">
+  <div className="container ">
+    <div className="row d-flex justify-content-center align-items-center">
       <div className="col-12 col-md-8 col-lg-6 col-xl-5">
         <div className="card bg-dark text-white">
-          <div className="card-body p-5 text-center">
-
-            <div className="mb-md-5 mt-md-4 pb-5">
-
-              <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
-              <p className="text-white-50 mb-5">Please enter your login and password!</p>
-              <label className="form-label">Email</label>
+          <div className="card-body text-center">
+            <div className="mb-md-5  ">
+              <h2 className="fw-bold mb-2 text-uppercase" >Login</h2>
+              <p style={{fontSize:'20px'}} className="text-white-50 mb-5">Please enter your login and password!</p>
+             <br/> <label className="form-label">Email</label>
               <div className="form-outline form-white mb-4">
                 <input type="email" id="typeEmailX" className="form-control form-control-lg" name='email' onChange={event=>setvalue(prev=>({...prev,email:event.target.value}))}placeholder='enter your email' />
               
@@ -84,18 +80,17 @@ const Login = (props) => {
                 <input type="password" id="typePasswordX" className="form-control form-control-lg" name='password' onChange={event=>setvalue(prev=>({...prev,password:event.target.value}))} placeholder='enter your password' />
                 
               </div>
-
-             
-<h5>{errormsg}</h5>
+<h5 style={{color:'red'}}>{errormsg}</h5>
             <button disabled={submitdisable} className="btn btn-outline-light btn-lg px-5" type='submit'> Login </button>
 
-              <ToastContainer></ToastContainer>
+              
 
             </div>
 
             <div>
-              <p className="mb-0" style={{color:'white'}}><b>Don't have an account? </b><Link className="nav-link" to="/signup">go to sign up</Link>
+              <p className="mb-0" style={{color:'white',fontSize:'20px'}}><b>Don't have an account? </b><Link className="nav-link" to="/signup">go to sign up</Link>
               </p>
+              
             </div>
 
           </div>

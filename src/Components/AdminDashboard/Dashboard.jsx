@@ -5,8 +5,8 @@ import {AiFillHome,AiOutlineBook} from 'react-icons/ai'
 import {FiLogOut} from 'react-icons/fi'
 import{RiLockPasswordFill} from 'react-icons/ri'
 import{BsBook} from 'react-icons/bs'
-import './sidebar.css'
-const Sidebar = ({Children}) => {
+import './Dashboard.css'
+const Dashboard= ({Children}) => {
     const[isopen,setisopen]=useState(false);
     const toggle=()=>{
         setisopen(!isopen);
@@ -45,9 +45,9 @@ const Sidebar = ({Children}) => {
         },
     ]
   return (
-    <div className='container1'>
+    <div className='container1' style={{backgroundColor:"black",display:'inline-block'}}>
         
-      <div style={{width:isopen?"300px":"50px"}} className="sidebar">
+      <div style={{width:isopen?"300px":"50px"}} className="Dashboard">
         <div className="top_section">
             <h5 style={{display:isopen?"block":"none"}} className="logo"> dashboard</h5>
             <div style={{marginLeft:isopen?"100px":"0px"}} className="bars">
@@ -68,4 +68,4 @@ const Sidebar = ({Children}) => {
   )
 }
 
-export default Sidebar
+export default Dashboard;
