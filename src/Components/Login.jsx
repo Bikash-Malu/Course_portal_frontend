@@ -48,10 +48,8 @@ const Login = (props) => {
     seterrormsg(err);
     }
     )
-
     console.log(value)
-    e.preventDefault();
-    
+    e.preventDefault();  
   }
 }
 

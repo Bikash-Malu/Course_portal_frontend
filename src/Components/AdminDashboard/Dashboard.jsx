@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import {AiFillHome,AiOutlineBook} from 'react-icons/ai'
 import {FiLogOut} from 'react-icons/fi'
 import{RiLockPasswordFill} from 'react-icons/ri'
-import{BsBook} from 'react-icons/bs'
+import{PiStudentLight} from 'react-icons/pi'
 import './Dashboard.css'
 const Dashboard= ({Children}) => {
     const[isopen,setisopen]=useState(false);
@@ -14,32 +14,27 @@ const Dashboard= ({Children}) => {
    
     const menuItem=[
         {
-            path:"/dhome",
+            path:"/Ahome",
             name:"Home",
             icon:<AiFillHome/>
         },
         {
-            path:"/dabout",
+            path:"/Aabout",
             name:"Profile",
             icon:<FaUserAlt/>
         },
         {
-            path:"/dsubject",
-            name:"Subject",
-            icon:<BsBook/>
+            path:"/dstudent",
+            name:"Sudent",
+            icon:<PiStudentLight/>
         },
         {
-            path:"/dregistration",
-            name:"Registration",
-            icon:<AiOutlineBook/>
-        },
-        {
-            path:"/dpassword",
+            path:"/Apassword",
             name:"Password",
             icon:<RiLockPasswordFill/>
         },
         {
-            path:"/dlogout",
+            path:"/Alogout",
             name:"Logout",
             icon:<FiLogOut/>
         },
@@ -49,9 +44,9 @@ const Dashboard= ({Children}) => {
         
       <div style={{width:isopen?"300px":"50px"}} className="Dashboard">
         <div className="top_section">
-            <h5 style={{display:isopen?"block":"none"}} className="logo"> dashboard</h5>
+            <h5 style={{display:isopen?"block":"none",color:'white'}} className="logo" > dashboard</h5>
             <div style={{marginLeft:isopen?"100px":"0px"}} className="bars">
-                <FaBars onMouseEnter={toggle}/>
+                <FaBars onMouseEnter={toggle} id="main1" style={{color:'white'}}/>
             </div>
         </div>
         {

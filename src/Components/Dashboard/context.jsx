@@ -25,8 +25,7 @@ const AppProvider=({children})=>{
             nbpages:data.nbpages,
         }
         
-    })
-      
+    })  
      }
      catch(error){
        console.log(error)

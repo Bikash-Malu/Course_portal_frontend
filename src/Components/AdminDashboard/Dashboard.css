@@ -1,7 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+    transition: 0.4s;
     text-decoration: none;
+    
    
 }
 .container1{
@@ -10,12 +12,16 @@
 main{
     padding: 20px;
 }
+.main1{
+   
+}
 .sidebar{
     background-color: #000;
     color: #fff;
     height: 100vh;
     width: 200px;
     transition: .4s;
+    padding-bottom: 300px;
 }
 .top_section{
     display: flex;

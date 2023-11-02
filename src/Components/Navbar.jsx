@@ -3,7 +3,7 @@ import "./Navbar.css"
 import { Link } from 'react-router-dom'
 export default function Navbar() {
   return (
-    <header class="header-area header-sticky" style={{marginTop:'-45px',background:'linear-gradient(to bottom, #4b6cb7 50%, #000000 90%)'}}>
+    <header class="header-area header-sticky" style={{marginTop:'-45px',background:'linear-gradient(to bottom, #4b6cb7 50%, #000000 90%)',color:''}}>
     <div class="container">
         <div class="row">
             <div class="col-12">

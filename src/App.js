@@ -19,6 +19,11 @@ import Desc from './Components/Dashboard/Desc';
 import { useGlobalContext } from './Components/Dashboard/context';
 import Search from './Components/Dashboard/Search';
 import Dashboard from './Components/AdminDashboard/Dashboard';
+import Student from './Components/AdminDashboard/Student';
+import Ahome from './Components/AdminDashboard/Ahome';
+import Apassword from './Components/AdminDashboard/Apassword';
+import AProfile from './Components/AdminDashboard/AProfile';
+import Alogout from './Components/AdminDashboard/Alogout';
 
 // import Login from './Components/Login';
 function App() {
@@ -51,6 +56,11 @@ function App() {
     <Route path="/desc/:name" element={<Desc title="dascription"/>}/>
     <Route path="/search" element={<Search/>}/>
     <Route path="/bikash" element={<Dashboard/>}/>
+    <Route path="/dstudent" element={<Student/>}/>
+    <Route path="/Ahome" element={<Ahome/>}/>
+    <Route path="/Apassword" element={<Apassword/>}/>
+    <Route path="/Aabout" element={<AProfile/>}/>
+    <Route path="/Alogout" element={<Alogout/>}/>
   
     </Routes>
     {/* <Footer/> */}
