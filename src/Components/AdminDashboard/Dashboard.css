@@ -18,7 +18,7 @@ main{
 .sidebar{
     background-color: #000;
     color: #fff;
-    height: 100vh;
+    height: 100%;
     width: 200px;
     transition: .4s;
     padding-bottom: 300px;

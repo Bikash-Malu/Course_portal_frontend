@@ -24,6 +24,8 @@ import Ahome from './Components/AdminDashboard/Ahome';
 import Apassword from './Components/AdminDashboard/Apassword';
 import AProfile from './Components/AdminDashboard/AProfile';
 import Alogout from './Components/AdminDashboard/Alogout';
+import Signup1 from './Components/Signup1';
+import Login1 from './Components/Login1';
 
 // import Login from './Components/Login';
 function App() {
@@ -61,6 +63,8 @@ function App() {
     <Route path="/Apassword" element={<Apassword/>}/>
     <Route path="/Aabout" element={<AProfile/>}/>
     <Route path="/Alogout" element={<Alogout/>}/>
+    <Route path="/RS" element={<Signup1/>}/>
+    <Route path="/RS1" element={<Login1/>}/>
   
     </Routes>
     {/* <Footer/> */}
