@@ -1,5 +1,5 @@
 export const isLoggedIn=()=>{
-   let a= localStorage.getItem("data",)
+   let a= localStorage.getItem("data")
    if(a==null){
     return false;
    }
@@ -8,7 +8,7 @@ export const isLoggedIn=()=>{
    }
 }
 export const dologin=(data,next)=>{
-    localStorage.getItem("data",JSON.stringify(data));
+    localStorage.setItem("data",JSON.stringify(data));
     next();
 }
 export const dologout=(next)=>{

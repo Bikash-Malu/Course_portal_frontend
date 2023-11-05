@@ -3,7 +3,7 @@ import Sidebar from '../Sidebar'
 import './Subject.css'
 import { Link } from 'react-router-dom'
 
-const Subject = (e) => {
+const Subject = (props) => {
   // let muna;
   // const[show,setShow]=useState(true)
   // let btntext;
@@ -20,6 +20,7 @@ const Subject = (e) => {
   return (
    
     <div style={{display:'flex'}}>
+      <title>{props.title}</title>
       <Sidebar/>
      <div className='conatainer-fluid'>
       <h3 className='text-center'>This is our Subject</h3>

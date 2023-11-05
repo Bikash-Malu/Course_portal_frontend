@@ -9,6 +9,7 @@ function Student() {
   const [id, setid] = useState(null);
   const [gender, setgender] = useState(null);
   const [coursename, setcourse] = useState(null);
+  const [password, setpassword] = useState(" ");
 
   const [data, setdata] = useState([]);
   useEffect(() => {
@@ -24,7 +25,7 @@ function Student() {
         setid(resp[0].id);
         setgender(resp[0].gender);
         setcourse(resp[0].coursename);
-        //setpassword(resp[0].password);
+        setpassword(resp[0].password);
         console.log(resp);
       });
     });
@@ -33,7 +34,7 @@ function Student() {
   function save() {
     // console.log(firstname,lastname,email);
     Swal.fire("Good job!", `${firstname}  save succesfully`, "success");
-    let data = { firstname, lastname, email, gender, coursename };
+    let data = { firstname, lastname, email, gender, coursename ,password};
     fetch("http://localhost:9190/portal/save", {
       method: "POST",
       headers: {
@@ -68,11 +69,11 @@ function Student() {
     setid(data[id - 1].id);
     setgender(data[id - 1].gender);
     setcourse(data[id - 1].coursename);
-    //setpassword(data[id - 1].password);
+    setpassword(data[id - 1].password);
   }
   function updateuser() {
     Swal.fire("Good job!",`${id} update  succesfully`, "success");
-    let item = { firstname, lastname, email, id, gender, coursename };
+    let item = { firstname, lastname, email, id, gender, coursename ,password};
     fetch(`http://localhost:9190/portal/${id}`, {
       method: "PUT",
       headers: {
@@ -120,6 +121,7 @@ function Student() {
                 <td>{item.email}</td>
                 <td>{item.gender}</td>
                 <td>{item.coursename}</td>
+                {/* <td>{item.password}</td> */}
              
 
                 <td>
@@ -202,6 +204,16 @@ function Student() {
                               className="form-control mt-1"
                             />
                           </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">password</th>
+                          <td><input
+                              type="text"
+                              value={password}
+                              // onChange={(e) => setpassword(e.target.value)}
+                              className="form-control mt-1"
+                            /></td>
+                          
                         </tr>
                         <tr>
                           <th scope="row">Enter the email</th>

@@ -28,7 +28,7 @@ const Logout = () => {
             <h4 className='text-center mt-4'>Are you want to logout?</h4><br></br>
             <div style={{marginLeft:"10px"}}>
           <Link to='/dhome'> <button className='btn btn-primary mx-4' >Cancel</button></Link> 
-           <button className='btn btn-danger mx-4'onClick={main} ><a href="/Login">Logout</a></button>
+           <button className='btn btn-danger mx-4'onClick={main} ><a href="/log">Logout</a></button>
            <ToastContainer/>
            </div>
           </div>

@@ -17,7 +17,7 @@ export default function Navbar() {
                         <li ><Link to='/'>Home</Link></li>
                         <li><Link to='/about'>About</Link></li>
                         <li ><Link to='/service'>Courses</Link></li>
-                        <li ><Link to='/login'>Login</Link></li> 
+                        <li ><Link to='/log'>Login</Link></li> 
                         <li ><Link to='/RS'>Sign up</Link></li> 
                     </ul>        
                     <a className='menu-trigger' href=''>

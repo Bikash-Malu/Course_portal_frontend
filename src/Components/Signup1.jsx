@@ -80,14 +80,11 @@ const submitform=(event)=>{
     <div className="row gx-lg-5 align-items-center">
       <div className="col-lg-6 mb-5 mb-lg-0">
         <h1 className="my-5 di requiredsplay-3 fw-bold ls-tight">
-          The best offer <br />
-          <span className="text-primary">for your business</span>
+          The student <br />
+          <span className="text-primary">Register here...</span>
         </h1>
         <p >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Eveniet, itaque accusantium odio, soluta, corrupti aliquam
-          quibusdam tempora at cupiditate quis eum maiores libero
-          veritatis? Dicta facilis sint aliquid ipsum atque?
+        Creating an effective signup page is a crucial part of building a student subject registration system or any application that requires user registration.
         </p>
       </div>
 
@@ -145,7 +142,7 @@ const submitform=(event)=>{
 
           
               <div className="text-center">
-             <span> <b>Already have account?</b></span>  <span><Link className="nav-link" to="/login">click here to login</Link> </span>
+             <span> <b>Already have account?</b></span>  <span><Link className="nav-link" to="/log">click here to login</Link> </span>
                
               </div>
             </form>

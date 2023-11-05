@@ -26,6 +26,8 @@ import AProfile from './Components/AdminDashboard/AProfile';
 import Alogout from './Components/AdminDashboard/Alogout';
 import Signup1 from './Components/Signup1';
 import Login1 from './Components/Login1';
+import Private from './Components/Private';
+import Resister from './Components/Resister';
 
 // import Login from './Components/Login';
 function App() {
@@ -48,11 +50,12 @@ function App() {
     </Route>
     <Route path="/" element={<Banner title="Welcome to Student Subject Registration"/>}/>
     <Route path="/dashboard" element={<Sidebar title="dashbaord"/>}/>
+    <Route path="/log" element={<Resister title="login"/>}/>
 
-    <Route path="/dhome" element={<Home title="dashbaord"/>}/>
-    <Route path="/dabout" element={<Dabout title="dashbaord"/>}/>
-    <Route path="/dsubject" element={<Subject title="dashbaord"/>}/>
-    <Route path="/dregistration" element={<Registration title="dashbaord"/>}/>
+   
+    <Route path="/dabout" element={<Dabout title="studentabout"/>}/>
+    <Route path="/dsubject" element={<Subject title="studentsubject"/>}/>
+    <Route path="/dregistration" element={<Registration title="subjectregistration"/>}/>
     <Route path="/dpassword" element={<Changepass title="dashbaord"/>}/>
     <Route path="/dlogout" element={<Logout title="dashbaord"/>}/>
     <Route path="/desc/:name" element={<Desc title="dascription"/>}/>
@@ -63,8 +66,12 @@ function App() {
     <Route path="/Apassword" element={<Apassword/>}/>
     <Route path="/Aabout" element={<AProfile/>}/>
     <Route path="/Alogout" element={<Alogout/>}/>
-    <Route path="/RS" element={<Signup1/>}/>
+    <Route path="/RS" element={<Signup1 title="signup"/>}/>
     <Route path="/RS1" element={<Login1/>}/>
+    <Route path="/private" element={< Private/>}> </Route>
+    <Route path="/dhome" element={<Home title="studenthome"/>}/>
+   
+
   
     </Routes>
     {/* <Footer/> */}

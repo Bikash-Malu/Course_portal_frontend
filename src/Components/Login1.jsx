@@ -33,6 +33,8 @@ const formsubmit=(event)=>{
     //save the to local storage
     dologin(data,()=>{
       console.log("save to local storage");
+      //redirect
+
     })
   }).catch(error=>{
     // console.log(error);

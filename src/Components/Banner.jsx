@@ -21,7 +21,7 @@ const Banner = (props) => {
               <h2>Welcome to subject registration</h2>
               <p>A student subject registration project is a software system typically used by educational institutions to manage the process of students registering for courses or subjects each semester or academic term</p>
               <div className="main-button-red">
-                  <div className="scroll-to-section"><a href="#contact"><Link to="/login">Join Us Now!</Link></a></div>
+                  <div className="scroll-to-section"><a href="#contact"><Link to="/log">Join Us Now!</Link></a></div>
               </div>
           </div>
               </div>

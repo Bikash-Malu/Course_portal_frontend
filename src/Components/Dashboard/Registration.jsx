@@ -6,7 +6,7 @@ import Search from './Search'
 import Pagination from './Pagination'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const Registration = (e) => {
+const Registration = (props) => {
   const [checked, setChecked] = useState(false);
   
   const handleChange = (e) => {
@@ -57,6 +57,7 @@ const Registration = (e) => {
   }
   return (
     <div style={{display:'flex'}}>
+      <title>{props.title}</title>
       <Sidebar/>
       <div style={{fontSize:'20px'}} >
         <Search/>

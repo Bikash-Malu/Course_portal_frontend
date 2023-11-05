@@ -1,148 +1,144 @@
-import React, { useState } from 'react'
-import "./Resister.css"
-import Swal from 'sweetalert2'
-import { v4 as uuidv4 } from 'uuid';
-export default function Resister() {
-    const[user,setUser]=useState({
-      id:uuidv4(),
-        name:"",
-        lname:"",
-        dob:"",
-       
-        email:"",
-        phone:"",
-        
-    });
-    let name,value;
-    const getuser=(e)=>{
-        name=e.target.name;
-        value=e.target.value;
-        setUser({...user,[name]:value})
-        console.log(getuser)
-    };
-    const post1=async(e1)=>
-    {
-      e1.preventDefault();
-      const{id,name,lname,dob,email,phone}=user;
-      if(id && name && lname && dob && email && phone)
-      {
-        const res=await fetch("https://react-a82be-default-rtdb.firebaseio.com/muna.json",{
-          method:"POST",
-          headers:{
-            "Content-Type":"application/json",
-          },
-          body:JSON.stringify({
-            id,
-            name,
-            lname,
-            dob,
-            email,
-            phone,
-           
-          }),
-         }
-         );
-         if(res){
-          setUser({
-            id:"",
-            name:"",
-            lname:"",
-            dob:"",
-          
-            email:"",
-            phone:"",
-            
-        });
-        Swal.fire({
-          position:'center',
-          icon: 'success',
-          title: 'Your Form submitted successfully!!',
-          showConfirmButton: false,
-          timer: 1500
-        })
-      } 
-    }
-   else{
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Something went wrong! fill all the field!!',
-        })  
+import {  useState } from "react";
+import { Link, useNavigate } from 'react-router-dom';
+import axios from "axios";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import { Button } from "antd";
+import Swal from "sweetalert2";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+import { Toast } from "reactstrap";
+
+function Resister(props) {
+   
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const navigate = useNavigate();
+    async function login(event) {
+      console.log(event)
+      if(email==''||password==''){
+        toast(' fill all the field', {
+          position: "bottom-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+        return;
       }
-    };
-  return (
-    <section className="vh-100 gradient-custom">
-    <div className="container py-5 h-100">
-      <div className="row justify-content-center align-items-center h-100">
-        <div className="col-12 col-lg-9 col-xl-7">
-          <div className="card shadow-2-strong card-registration" >
-            <div className="card-body p-4 p-md-5">
-              <h3 className="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
-              <form method='post'>
-  
-                <div className="row">
-                  <div className="col-md-6 mb-4">
-  
-                    <div className="form-outline">
-                    <label className="form-label" for="firstName">First Name</label>
-                      <input type="text" value={user.name} id="firstName" className="form-control form-control-lg" onChange={getuser} name='name'/>
+        event.preventDefault();
+        try {
+          await axios.post("http://localhost:9190/login", {
+            email: email,
+            password: password,
+            }).then((res) => 
+            {
+             console.log(res.data);
+             
+             if (res.data.message == "email not match") 
+             {
+              Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'emaill not exist',
+                
+              })
+             } 
+             else if(res.data.message == "login successfully")
+             { 
+              toast("login succesfully")
+                
+                navigate('/dhome');
+             } 
+              else 
+             { 
+              toast(' password and email incorrect', {
+                position: "bottom-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+               
+             }
+          }, fail => {
+           console.error(fail); // Error!
+  });
+        }
+
+ 
+         catch (err) {
+          alert(err);
+        }
+      
+      }
+
+    return (
+
+       <div>
+        <title>{props.title}</title>
+        <ToastContainer/>
+          <form className='h-50 mt-2'>
+      <section className="h-50 gradient-custom mt-5"style={{height:"300px",background:"linear-gradient(to right,bisque,pink,bisque,#FDE5D4)"}}>
+        <Navbar/>
+     
+  <div className="container ">
+    <div className="row d-flex justify-content-center align-items-center">
+      <div className="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div className="card bg-dark text-white">
+          <div className="card-body text-center">
+            <div className="mb-md-5  ">
+              <h2 className="fw-bold mb-2 text-uppercase" >Login</h2>
+              <p style={{fontSize:'20px'}} className="text-white-50 mb-5">Please enter your login and password!</p>
+             <br/> <label className="form-label">Email</label>
+              <div className="form-outline form-white mb-4">
+                <input type="email" id="typeEmailX" className="form-control form-control-lg" name='email' placeholder='enter your email'  value={email} required
+  onChange={(event) => {
+    setEmail(event.target.value);
+  }} />
               
-                    </div>
-  
-                  </div>
-                  <div className="col-md-6 mb-4">
-  
-                    <div className="form-outline">
-                    <label className="form-label" for="lastName">Last Name</label>
-                      <input type="text" value={user.lname} id="lastName" className="form-control form-control-lg" onChange={getuser} name='lname'/>
-                      
-                    </div>
-  
-                  </div>
-                </div>
-  
-                <div className="row">
-                  <div className="col-md-6 mb-4 d-flex align-items-center">
-  
-                    <div className="form-outline datepicker w-100">
-                    <label for="birthdayDate" className="form-label">Date of Birth</label>
-                      <input type='date' value={user.dob} className="form-control form-control-lg" id="birthdayDate" onChange={getuser} name='dob' />
-                     
-                    </div>
-  
-                  </div>
-                  <div className="col-md-6 mb-4 pb-2">
-                  <label className="form-label" for="phoneNumber">Phone Number</label>
-                    <div className="form-outline">
-                   
-                      <input type="text" value={user.phone} id="phoneNumber" className="form-control form-control-lg" onChange={getuser}name='phone' />
-                     
-                    </div>
-  
-                  </div>
-                </div>
-  
-                <div className="row">
-                  <div className="col-md-6 mb-4 pb-2">
-  
-                    <div className="form-outline">
-                    <label className="form-label" for="emailAddress">Email</label>
-                      <input type="email" value={user.email} id="emailAddress"name='email' className="form-control form-control-lg"  placeholder='Enter your email' onChange={getuser}/>
-                    
-                    </div>
-  
-                  </div>
-                  
-                </div>
-                <div className="mt-4 pt-2">
-                 <button onClick={post1} type='submit' className='btn btn-outline-warning text-center'>Submit</button>
-                </div>
-              </form>
+              </div>
+              <label className="form-label" >Password</label>
+              <div className="form-outline form-white mb-4">
+                <input type="password" id="typePasswordX" className="form-control form-control-lg" name='password' placeholder='enter your password'  value={password} required
+  onChange={(event) => {
+    setPassword(event.target.value);
+  }}
+/>
+                
+              </div>
+
+            <button className="btn btn-primary" type='submit' onClick={login}> Login </button>
+
+              
+
             </div>
+
+            <div>
+              <p className="mb-0" style={{color:'white',fontSize:'20px'}}><b>Don't have an account? </b><Link className="nav-link" to="/RS">go to sign up</Link>
+              </p>
+              
+            </div>
+
           </div>
         </div>
       </div>
     </div>
-  </section>
-  )
-}
+  </div>
+</section>
+</form>
+<Footer/>
+
+     </div>
+    );
+  }
+  
+  export default Resister;
+
+ 
