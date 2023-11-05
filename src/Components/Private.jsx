@@ -4,13 +4,7 @@ import { isLoggedIn } from './auto';
 
 const Private = () => {
     
-    if(isLoggedIn==true){
-        console.log(isLoggedIn);
-        return<Navigate to={'/private/dhome'}/>
-    }
-    else{
-        return <Navigate to={'/RS1'}/>;
-    }
+   
  
 }
 

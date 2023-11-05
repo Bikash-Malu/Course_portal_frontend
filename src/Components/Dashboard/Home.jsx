@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from '../Sidebar'
-
+import './Home.css'
 const Home = (props) => {
   return (
     
@@ -9,17 +9,93 @@ const Home = (props) => {
 
       <Sidebar></Sidebar>
        
-        <div>
-          <h1>welcome to this page</h1>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A beatae commodi illo animi laborum voluptas dolorum perspiciatis numquam labore! Nisi quibusdam placeat adipisci fuga, rem eos eaque, ipsam sapiente possimus quaerat dolor id explicabo asperiores architecto ducimus libero quod pariatur repudiandae distinctio tempora sed excepturi natus iste. At neque illum cum, quam fugit debitis earum facere voluptas voluptatem modi deleniti! Ratione odit mollitia, a totam magnam fuga qui necessitatibus libero non, nemo recusandae perferendis, eligendi dolorum consequuntur? Dolor cum praesentium in id ut, eos vel tenetur voluptatum recusandae excepturi porro libero veniam natus a beatae consequuntur voluptates optio ullam? Atque.</p>
-
-<h1>nsjc</h1>
-<div style={{overflow: "hidden",position:'relative',top:'60%',backgroundSize:'contain'}}>
+        <div className='container-fluid'>
+        <div className="container-xxl py-5">
+        <div className="container-fluid">
+            <div className="row g-5">
+                <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" >
+                    <div className="position-relative h-100">
+                        <img className="img-fluid position-absolute w-100 h-100" src="https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1511848673/1511848671.jpg" alt="" />
+                    </div>
+                </div>
+                <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 className="section-title bg-white text-start text-primary pe-3">subject registration</h6>
+                    <h1 className="mb-4">Welcome to Student Dashboard</h1>
+                    <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <div className="row gy-2 gx-4 mb-4">
+                        <div className="col-sm-6">
+                            <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                        </div>
+                        <div className="col-sm-6">
+                            <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>Online classNamees</p>
+                        </div>
+                        <div className="col-sm-6">
+                            <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                        </div>
+                        <div className="col-sm-6">
+                            <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                        </div>
+                        <div className="col-sm-6">
+                            <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>Online classNamees</p>
+                        </div>
+                        <div className="col-sm-6">
+                            <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                        </div>
+                    </div>
+                    <a className="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <h5 class="mb-3">Skilled Instructors</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                            <h5 class="mb-3">Online Classes</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                            <h5 class="mb-3">Home Projects</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                            <h5 class="mb-3">Book Library</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div style={{overflow: "hidden",position:'relative',backgroundSize:'contain', marginLeft:'20px'}}>
   <svg
     preserveAspectRatio="none"
     viewBox="0 0 1200 120"
     xmlns="http://www.w3.org/2000/svg"
-    style={{ fill: '#2b8282', width: '146%', height: 172, transform: 'rotate(180deg) scaleX(-1)' }}
+    style={{ fill: '#2b8282', width: '146%', transform: 'rotate(180deg) scaleX(-1)' }}
   >
     <path
     d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"

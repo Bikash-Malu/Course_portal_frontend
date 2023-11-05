@@ -5,10 +5,108 @@ const Ahome = () => {
   return (
     <div style={{display:'flex'}}>
      <Dashboard/>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus eius error aperiam voluptatibus? Voluptas esse impedit modi earum inventore ipsam, recusandae nam aspernatur quos aliquid officiis nisi perspiciatis doloribus cum exercitationem explicabo neque error nobis fugit consequuntur ad libero est aut? Qui quos deserunt nostrum sapiente placeat ab rem, nobis numquam magnam similique odit blanditiis. Perspiciatis ut consectetur illo reiciendis blanditiis qui quibusdam, fugiat, sunt rerum earum error natus quo accusamus. Velit exercitationem iste nisi illo asperiores dolorem, sapiente ratione possimus! Excepturi earum minus ad nam ipsum perspiciatis! Aliquam impedit nemo sit cumque neque quam. Placeat ducimus quidem reiciendis voluptatum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugiat doloremque autem? Incidunt dolorem facere nihil labore amet assumenda quia perspiciatis accusantium, quaerat maiores, a, eum nisi commodi aspernatur atque error ut asperiores dolor? Maxime, repudiandae fuga dolorum totam sit ut cumque explicabo ex, iure dolorem cupiditate id corrupti perspiciatis officiis ea expedita laudantium iusto, quod veritatis esse eum! Fugiat hic deserunt consequuntur perferendis ad earum cupiditate, qui impedit sint. Aliquid consequuntur quidem commodi. Molestiae quis ratione voluptates consequuntur, animi laboriosam quasi. Adipisci consectetur illo voluptatibus quis nihil molestias quam. Magni quidem, inventore adipisci amet alias officiis exercitationem voluptate deleniti sunt vitae doloremque commodi iste et ea cum libero aliquid laboriosam qui facilis odit labore deserunt! Saepe voluptatum minima eveniet ullam ea soluta explicabo veritatis. Voluptatem quae unde repellat voluptate eos, id itaque. Excepturi distinctio, eos ipsum aspernatur veniam quam. Modi, nemo non laudantium voluptatem eligendi, saepe illum earum adipisci voluptatibus corrupti magnam minus nisi beatae reiciendis eos quia. Illo, molestiae. Porro unde quas quisquam odit nam reprehenderit nulla ea repellat! Beatae neque dolor illum asperiores laboriosam repudiandae eos ad eligendi totam est unde, praesentium porro temporibus consectetur nam cum ea omnis tempore aperiam modi fugiat possimus quod harum cupiditate! Amet ipsa maxime rerum in nemo enim ipsam tenetur ut, eos eveniet? Quas aliquam odio temporibus accusamus quo modi autem, laudantium quia sapiente repellat velit at suscipit consequatur aspernatur officia, quidem voluptas quod perspiciatis facilis! Odio explicabo nam illo eligendi ratione, facere aspernatur veniam ut impedit, quo voluptates ad necessitatibus? Rem dolores iste explicabo aliquam vitae odit ipsa eum culpa repellat. Nobis dolores reprehenderit ipsam nisi repellendus quam voluptates eos perspiciatis itaque, dolor, numquam voluptatibus minus fugiat. Facere inventore, cupiditate laboriosam quisquam sequi nulla aspernatur perferendis quo tempore odit praesentium facilis officiis dicta similique delectus aut molestiae nostrum atque. Eum sunt magni quis ad itaque, blanditiis, voluptate laudantium ullam veritatis sequi nam libero, error perspiciatis quae cumque! Excepturi, provident? Voluptate praesentium dicta at. Perspiciatis culpa autem quisquam quibusdam nam recusandae numquam in provident neque magni magnam iusto fugit hic, iure, dolore fuga accusantium adipisci sed laboriosam laborum deserunt praesentium. Mollitia, est sapiente? Enim quisquam provident in deserunt ullam! Culpa quibusdam expedita perferendis quisquam illum eaque facere! Id consequuntur iste repellat incidunt pariatur soluta. Tenetur facilis pariatur quod suscipit. Ea harum minus repellat cum saepe, vel facere quae? Architecto quis deleniti id tempore, beatae molestias consequatur voluptatum consectetur <p>officia nobis tempora corrupti, optio necessitatibus quos ea excepturi distinctio eius illum? Ut inventore delectus recusandae exercitationem vitae laudantium voluptas. Autem sapiente qui alias assumenda dignissimos magnam, quibusdam repudiandae eaque nobis? Non suscipit sed unde aut saepe? Dolor tempora et obcaecati voluptate animi mollitia nisi facere, labore velit quas quae reprehenderit molestiae, perferendis nam facilis. Ab minus error aliquam veniam deleniti vero commodi quas, soluta impedit, atque omnis possimus fugiat dolore consectetur facere officiis ipsa aperiam nobis, asperiores aspernatur porro molestias. Officiis voluptatum voluptates culpa, vel, deserunt repellendus doloremque quas dignissimos fuga consectetur repudiandae tenetur molestiae earum rem, soluta quod eius delectus facilis labore. Nihil vel, ea nesciunt est ab cum hic eveniet, totam corporis ipsam provident non delectus voluptatum dicta, explicabo optio blanditiis nostrum architecto magni? Accusamus asperiores nihil quisquam dolor provident ut animi in ullam dolorum minus consequuntur quos aut, voluptatum sequi quod quasi. Mollitia iusto aut optio fugiat quasi officia sint aperiam possimus repudiandae odit, dolorem quis sed quibusdam saepe itaque cupiditate inventore. Temporibus, quis? Ipsa unde maiores accusantium, quod impedit nostrum hic neque corporis dignissimos ab quo sunt! Quis eos tempora tempore, repudiandae corrupti vero voluptate quam ducimus obcaecati dolore sed delectus odio assumenda facilis veritatis unde, voluptas quaerat? Numquam impedit voluptates modi molestias laboriosam ducimus? Rerum culpa animi itaque sint ullam illum, doloremque aperiam, doloribus natus facilis corporis perspiciatis asperiores eius dignissimos repudiandae ducimus mollitia repellat qui nesciunt? Debitis vel optio quod repellendus. Molestias vitae quasi deserunt perspiciatis quo dolorum soluta tempora quae, voluptatem quis rerum quibusdam cumque cum possimus error necessitatibus commodi amet asperiores ullam hic. Laborum deserunt aspernatur maiores rerum doloremque sed architecto ipsa exercitationem blanditiis quod esse porro soluta molestias ipsam excepturi quaerat, hic quia </p>
-      </div>
+     
+     <div className='container-fluid'>
+        <div className="container-xxl py-5">
+        <div className="container-fluid">
+            <div className="row g-5">
+                <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" >
+                    <div className="position-relative h-100">
+                        <img className="img-fluid position-absolute w-100 h-100" src="https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1511848673/1511848671.jpg" alt="" />
+                    </div>
+                </div>
+                <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 className="section-title bg-white text-start text-primary pe-3">subject registration</h6>
+                    <h1 className="mb-4">Welcome to Admin Dashboard</h1>
+                    <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <div className="row gy-2 gx-4 mb-4">
+                        <div className="col-sm-6">
+                            <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                        </div>
+                        <div className="col-sm-6">
+                            <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>Online classNamees</p>
+                        </div>
+                        <div className="col-sm-6">
+                            <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                        </div>
+                        <div className="col-sm-6">
+                            <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                        </div>
+                        <div className="col-sm-6">
+                            <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>Online classNamees</p>
+                        </div>
+                        <div className="col-sm-6">
+                            <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                        </div>
+                    </div>
+                    <a className="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <h5 class="mb-3">Skilled Instructors</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                            <h5 class="mb-3">Online Classes</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                            <h5 class="mb-3">Home Projects</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                            <h5 class="mb-3">Book Library</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div style={{overflow: "hidden",position:'relative',backgroundSize:'contain', marginLeft:'20px'}}>
+  <svg
+    preserveAspectRatio="none"
+    viewBox="0 0 1200 120"
+    xmlns="http://www.w3.org/2000/svg"
+    style={{ fill: '#2b8282', width: '146%', transform: 'rotate(180deg) scaleX(-1)' }}
+  >
+    <path
+    d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+    opacity=".25"
+  />
+    <path
+      d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+      opacity=".5"
+    />
+    <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+  </svg>
+</div>
+
+        </div>
     </div>
   )
 }

@@ -1,0 +1,37 @@
+/********** Template CSS **********/
+:root {
+    --primary: #3d3f3f;
+    --light: #F0FBFC;
+    --dark: #181d38;
+}
+
+
+
+
+
+
+.section-title.text-start::after {
+    width: calc(100% + 60px);
+    left: 0;
+}
+
+
+/*** Service ***/
+.service-item {
+    background: var(--light);
+    transition: .5s;
+}
+
+.service-item:hover {
+    margin-top: -10px;
+    background: var(--primary);
+}
+
+.service-item * {
+    transition: .5s;
+}
+
+.service-item:hover * {
+    color: var(--light) !important;
+}
+

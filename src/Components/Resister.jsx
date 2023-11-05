@@ -43,19 +43,23 @@ function Resister(props) {
               Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'emaill not exist',
+                text: 'email not exist',
                 
               })
              } 
              else if(res.data.message == "login successfully")
              { 
               toast("login succesfully")
-                
+              if(email==="admin1@gmail.com"||email==="admin2@gmail.com"||email==="admin4@gmail.com"||email==="admin3@gmail.com"){
+                navigate('/ahome')
+              }
+              else{
                 navigate('/dhome');
+              }
              } 
               else 
              { 
-              toast(' password and email incorrect', {
+              toast(' password  incorrect', {
                 position: "bottom-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -82,7 +86,7 @@ function Resister(props) {
     return (
 
        <div>
-        <title>{props.title}</title>
+        <title>{props.ti}</title>
         <ToastContainer/>
           <form className='h-50 mt-2'>
       <section className="h-50 gradient-custom mt-5"style={{height:"300px",background:"linear-gradient(to right,bisque,pink,bisque,#FDE5D4)"}}>

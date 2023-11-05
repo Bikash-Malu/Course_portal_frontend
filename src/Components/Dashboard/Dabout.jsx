@@ -69,6 +69,7 @@ const Dabout = (props) => {
     </tr>
   </tbody>
 </table>
+
       </div>
     </div>
   )
