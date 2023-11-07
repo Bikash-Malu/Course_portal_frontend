@@ -358,6 +358,21 @@ function Student() {
                           </td>
                         </tr>
                         <tr>
+                          <th scope="row">Enter the password</th>
+                          <td>
+                            {" "}
+                            <input
+                              type="password"
+                              onChange={(e) => {
+                                setpassword(e.target.value);
+                              }}
+                              className="form-control mt-1"
+                              name="password"
+                              placeholder="type password here"
+                            ></input>
+                          </td>
+                        </tr>
+                        <tr>
                           <th scope="row">Gender</th>
                           <td colSpan={-2}>
                             {" "}
@@ -380,7 +395,7 @@ function Student() {
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">Selecet the course</th>
+                          <th scope="row">Select the course</th>
                           <td>
                           <select
                               class="form-select"

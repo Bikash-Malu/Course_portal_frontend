@@ -1,8 +1,11 @@
 import React from 'react'
 import Navbar from './Navbar'
+import { FaOtter } from 'react-icons/fa'
+import Footer from './Footer'
 
 export default function About(props) {
   return (
+    <div>
     <section class="page-section bg-primary" id="about">
         <Navbar/>
         <title>{props.title}</title>
@@ -17,6 +20,8 @@ export default function About(props) {
                 </div>
             </div>
         </section>
+        <Footer/>
+        </div>
   )
 }
 

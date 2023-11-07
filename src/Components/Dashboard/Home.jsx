@@ -43,8 +43,31 @@ const Home = (props) => {
                             <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
                         </div>
                     </div>
-                    <a className="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                    <a className="btn btn-primary py-3 px-5 mt-2" href=""data-toggle="modal" data-target="#exampleModalLong">Read More</a>
                 </div>
+              
+
+
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit doloribus cupiditate magni deserunt sapiente veniam quidem est et voluptate omnis beatae neque, vitae nihil fugiat voluptatem, obcaecati recusandae quod similique. Nesciunt quo consectetur et praesentium pariatur quidem eius sunt expedita, facilis rem consequuntur. Doloremque, dolor! Pariatur esse consequuntur quae modi!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
             </div>
         </div>
     </div>

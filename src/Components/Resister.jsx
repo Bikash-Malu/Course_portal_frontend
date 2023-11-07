@@ -1,13 +1,11 @@
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { Button } from "antd";
 import Swal from "sweetalert2";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
-import { Toast } from "reactstrap";
 
 function Resister(props) {
    
@@ -16,7 +14,7 @@ function Resister(props) {
     const navigate = useNavigate();
     async function login(event) {
       console.log(event)
-      if(email==''||password==''){
+      if(email===''||password===''){
         toast(' fill all the field', {
           position: "bottom-center",
           autoClose: 3000,
@@ -38,7 +36,7 @@ function Resister(props) {
             {
              console.log(res.data);
              
-             if (res.data.message == "email not match") 
+             if (res.data.message === "email not match") 
              {
               Swal.fire({
                 icon: 'error',
@@ -47,9 +45,10 @@ function Resister(props) {
                 
               })
              } 
-             else if(res.data.message == "login successfully")
+             else if(res.data.message === "login successfully")
              { 
               toast("login succesfully")
+             
               if(email==="admin1@gmail.com"||email==="admin2@gmail.com"||email==="admin4@gmail.com"||email==="admin3@gmail.com"){
                 navigate('/ahome')
               }
@@ -86,7 +85,7 @@ function Resister(props) {
     return (
 
        <div>
-        <title>{props.ti}</title>
+        <title>{props.title}</title>
         <ToastContainer/>
           <form className='h-50 mt-2'>
       <section className="h-50 gradient-custom mt-5"style={{height:"300px",background:"linear-gradient(to right,bisque,pink,bisque,#FDE5D4)"}}>
@@ -99,7 +98,7 @@ function Resister(props) {
           <div className="card-body text-center">
             <div className="mb-md-5  ">
               <h2 className="fw-bold mb-2 text-uppercase" >Login</h2>
-              <p style={{fontSize:'20px'}} className="text-white-50 mb-5">Please enter your login and password!</p>
+              <p style={{fontSize:'20px'}} className="text-white-50 mb-5">Please enter your email and password!</p>
              <br/> <label className="form-label">Email</label>
               <div className="form-outline form-white mb-4">
                 <input type="email" id="typeEmailX" className="form-control form-control-lg" name='email' placeholder='enter your email'  value={email} required
@@ -118,7 +117,7 @@ function Resister(props) {
                 
               </div>
 
-            <button className="btn btn-primary" type='submit' onClick={login}> Login </button>
+            <button className="btn btn-primary btn-lg" type='submit' onClick={login} style={{padding:'0 px 25px 0 25px'}}> Login </button>
 
               
 

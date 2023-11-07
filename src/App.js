@@ -55,7 +55,7 @@ function App() {
    
     <Route path="/dabout" element={<Dabout title="studentabout"/>}/>
     <Route path="/dsubject" element={<Subject title="studentsubject"/>}/>
-    <Route path="/dregistration" element={<Registration title="subjectregistration"/>}/>
+    <Route path="/dregistration" element={<Registration title="sudentregistartion"/>}/>
     <Route path="/dpassword" element={<Changepass title="dashbaord"/>}/>
     <Route path="/dlogout" element={<Logout title="dashbaord"/>}/>
     <Route path="/desc/:name" element={<Desc title="dascription"/>}/>
