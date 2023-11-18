@@ -13,7 +13,7 @@ const Banner = (props) => {
       <video  id="bg-video" autoPlay loop muted controls src={course}>
       </video>
       <div className="video-overlay header-text">
-          <div className="container">
+          <div className="container" style={{position:'relative',top:'400px'}}>
             <div className="row">
               <div className="col-lg-12">
                 <div className="caption">

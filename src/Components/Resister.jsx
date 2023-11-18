@@ -35,8 +35,8 @@ function Resister(props) {
             }).then((res) => 
             {
              console.log(res.data);
-             
              if (res.data.message === "email not match") 
+             
              {
               Swal.fire({
                 icon: 'error',
@@ -49,8 +49,8 @@ function Resister(props) {
              { 
               toast("login succesfully")
              
-              if(email==="admin1@gmail.com"||email==="admin2@gmail.com"||email==="admin4@gmail.com"||email==="admin3@gmail.com"){
-                navigate('/ahome')
+              if(email=="admin1@gmail.com"||email=="admin2@gmail.com"){
+                navigate('/Ahome')
               }
               else{
                 navigate('/dhome');

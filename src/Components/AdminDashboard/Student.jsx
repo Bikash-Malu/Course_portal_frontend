@@ -56,7 +56,7 @@ function Student() {
     }).then((result) => {
       result.json().then((resp) => {
         console.log(resp);
-        Swal.fire("Good job!", `${firstname}  deleted succesfully`, "success");
+        Swal.fire("Good job!", `${id}  deleted succesfully`, "success");
         getList();
       });
     });
@@ -100,8 +100,8 @@ function Student() {
           ></h1>
           <table
             border="1"
-            className="table"
-            style={{ backgroundColor: "#B2C8BA", fontWeight: "600" }}
+            className="table table-hover"
+            style={{  fontWeight: "600" }}
           >
             <tr className="" style={{ color: "black" }}>
               <td>id</td>
