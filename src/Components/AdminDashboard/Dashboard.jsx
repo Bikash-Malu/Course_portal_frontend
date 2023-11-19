@@ -1,5 +1,5 @@
 import{ React, useState} from 'react'
-import{FaBars, FaUserAlt } from 'react-icons/fa'
+import{FaBars, FaUserAlt,FaBookReader} from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
 import {AiFillHome,AiOutlineBook} from 'react-icons/ai'
 import {FiLogOut} from 'react-icons/fi'
@@ -22,6 +22,11 @@ const Dashboard= ({Children}) => {
             path:"/Aabout",
             name:"Profile",
             icon:<FaUserAlt/>
+        },
+        {
+            path:"/acourse",
+            name:"Course",
+            icon:<FaBookReader />
         },
         {
             path:"/dstudent",

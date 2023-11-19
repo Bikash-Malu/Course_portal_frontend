@@ -24,6 +24,7 @@ import Alogout from './Components/AdminDashboard/Alogout';
 import Signup1 from './Components/Signup1';
 import Login1 from './Components/Login1';
 import Resister from './Components/Resister';
+import Course from './Components/AdminDashboard/Course';
 
 // import Login from './Components/Login';
 function App() {
@@ -67,6 +68,7 @@ function App() {
     <Route path="/RS1" element={<Login1/>}/>
     {/* <Route path="/private" element={< Private/>}> </Route> */}
     <Route path="/dhome" element={<Home title="studenthome"/>}/>
+    <Route path="/acourse" element={<Course title="studenthome"/>}/>
    
 
   

@@ -2,40 +2,37 @@ import Swal from "sweetalert2";
 import React, { useEffect, useState } from "react";
 import { Button } from "reactstrap";
 import Dashboard from "./Dashboard";
-function Student() {
-  const [firstname, setfirstname] = useState("");
-  const [lastname, setlastname] = useState("");
-  const [email, setemail] = useState("");
+function Course() {
+  const [coursename, setcoursename] = useState("");
+  const [author, setauthor] = useState("");
+  const [coursedetail, setcoursedetail] = useState("");
   const [id, setid] = useState(null);
   const [gender, setgender] = useState(null);
-  const [coursename, setcourse] = useState(null);
-  const [password, setpassword] = useState(" ");
+  const [credit, setcredit] = useState(" ");
 
   const [data, setdata] = useState([]);
   useEffect(() => {
     getList();
   }, []);
   function getList() {
-    fetch("http://localhost:9190/api/get").then((result) => {
+    fetch("http://localhost:9190/course/get").then((result) => {
       result.json().then((resp) => {
         setdata(resp);
-        setfirstname(resp[0].firstname);
-        setlastname(resp[0].lastname);
-        setemail(resp[0].email);
+        setcoursename(resp[0].coursename);
+        setauthor(resp[0].author);
+        setcoursedetail(resp[0].coursedetail);
         setid(resp[0].id);
-        setgender(resp[0].gender);
-        setcourse(resp[0].coursename);
-        setpassword(resp[0].password);
+        setcredit(resp[0].credit);
         console.log(resp);
       });
     });
   }
 
   function save() {
-    // console.log(firstname,lastname,email);
-    Swal.fire("Good job!", `${firstname}  save succesfully`, "success");
-    let data = { firstname, lastname, email, gender, coursename ,password};
-    fetch("http://localhost:9190/portal/save", {
+    // console.log(coursename,author,coursedetail);
+    Swal.fire("Good job!", `${coursename}  save succesfully`, "success");
+    let data = { coursename, author, coursedetail, gender, coursename ,credit};
+    fetch("http://localhost:9190/course/save", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -51,7 +48,7 @@ function Student() {
     document.getElementsByTagName("input")[2].value = null;
   }
   function deleteuser(id) {
-    fetch(`http://localhost:9190/portal/${id}`, {
+    fetch(`http://localhost:9190/course/${id}`, {
       method: "DELETE",
     }).then((result) => {
       result.json().then((resp) => {
@@ -64,18 +61,17 @@ function Student() {
   function selectuser(id) {
 
     console.log(data[id]);
-    setfirstname(data[id - 1].firstname);
-    setlastname(data[id - 1].lastname);
-    setemail(data[id - 1].email);
+    setcoursename(data[id - 1].coursename);
+    setauthor(data[id - 1].author);
+    setcoursedetail(data[id - 1].coursedetail);
     setid(data[id - 1].id);
     setgender(data[id - 1].gender);
-    setcourse(data[id - 1].coursename);
-    setpassword(data[id - 1].password);
+    setcredit(data[id - 1].credit);
   }
   function updateuser() {
     Swal.fire("Good job!",`${id} update  succesfully`, "success");
-    let item = { firstname, lastname, email, id, gender, coursename ,password};
-    fetch(`http://localhost:9190/portal/${id}`, {
+    let item = { coursename, author, coursedetail, id, gender, coursename ,credit};
+    fetch(`http://localhost:9190/course/${id}`, {
       method: "PUT",
       headers: {
         Accept: "application/json",
@@ -106,23 +102,20 @@ function Student() {
           >
             <tr className="" style={{ color: "black" }}>
               <td>id</td>
-              <td>first name</td>
-              <td>last name</td>
-              <td>email</td>
-              <td>Gender</td>
-              <td>Course</td>
-              
+              <td>course name</td>
+              <td>course author</td>
+              <td>coursedetail</td>
+              <td>Course credit</td>
               <td colSpan={2}>Action</td>
             </tr>
             {data.map((item, i) => (
               <tr key={i}>
                 <td>{item.id}</td>
-                <td>{item.firstname}</td>
-                <td>{item.lastname}</td>
-                <td>{item.email}</td>
-                <td>{item.gender}</td>
                 <td>{item.coursename}</td>
-                {/* <td>{item.password}</td> */}
+                <td>{item.author}</td>
+                <td>{item.coursedetail}</td>
+                <td>{item.credit}</td>
+                {/* <td>{item.credit}</td> */}
              
 
                 <td>
@@ -169,7 +162,7 @@ function Student() {
                         style={{ marginLeft: "120px" }}
                       />
                     </center>
-                    Update the student
+                    Update the course
                   </h5>
                   <button
                     type="button"
@@ -185,69 +178,51 @@ function Student() {
                     <table className="table">
                       <tbody>
                         <tr>
-                          <th scope="row">Enter First Name</th>
+                          <th scope="row">Enter course name</th>
                           <td>
                             <input
                               type="text"
-                              value={firstname}
-                              onChange={(e) => setfirstname(e.target.value)}
+                              value={coursename}
+                              onChange={(e) => setcoursename(e.target.value)}
                               className="form-control mt-1"
                             />
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">Enter Last Name</th>
+                          <th scope="row">Enter faculity</th>
                           <td>
                             <input
                               type="text"
-                              value={lastname}
-                              onChange={(e) => setlastname(e.target.value)}
+                              value={author}
+                              onChange={(e) => setauthor(e.target.value)}
                               className="form-control mt-1"
                             />
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">password</th>
+                          <th scope="row">credit</th>
                           <td><input
                               type="text"
-                              value={password}
-                              // onChange={(e) => setpassword(e.target.value)}
+                              value={credit}
+                              onChange={(e) => setcredit(e.target.value)}
                               className="form-control mt-1"
                             /></td>
                           
                         </tr>
                         <tr>
-                          <th scope="row">Enter the email</th>
+                          <th scope="row">Enter the coursedetail</th>
                           <td>
                             {" "}
                             <input
-                              type="email"
-                              value={email}
-                              onChange={(e) => setemail(e.target.value)}
+                              type="coursedetail"
+                              value={coursedetail}
+                              onChange={(e) => setcoursedetail(e.target.value)}
                               className="form-control mt-1"
                             />
                           </td>
                         </tr>
-                        <tr>
-                          <th scope="row">Gender</th>
-                          <td>Male or female</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Subject</th>
-                          <td>
-                            <select
-                              class="form-select"
-                              aria-label="Default select example"
-                              onChange={(e) => setcourse(e.target.value)}
-                            >
-                              <option selected>Select the course</option>
-                              <option value="ST DOMAIN">ST DOMAIN</option>
-                              <option value="MACHINE LEARNING">MACHINE LEANING</option>
-                              <option value="CLOUD DOMAIN">CLUOD DOMAIN</option>
-                              <option value="AR AND VR">AR AND VR</option>
-                            </select>
-                          </td>
-                        </tr>
+                       
+                        
                       </tbody>
                     </table>
                   </div>
@@ -275,7 +250,7 @@ function Student() {
               data-toggle="modal"
               data-target="#exampleModal1"
             >
-              Add the Student
+              Add the course
             </button>
           </center>
 
@@ -299,7 +274,7 @@ function Student() {
                         style={{ marginLeft: "120px" }}
                       />
                     </center>
-                    Add new Student
+                    Add new course
                   </h5>
                   <button
                     type="button"
@@ -315,101 +290,62 @@ function Student() {
                     <table className="table">
                       <tbody>
                         <tr>
-                          <th scope="row"> Enter First Name</th>
+                          <th scope="row"> Enter course name</th>
                           <td>
                             {" "}
                             <input
                               type="text"
                               onChange={(e) => {
-                                setfirstname(e.target.value);
+                                setcoursename(e.target.value);
                               }}
                               className="form-control mt-1"
-                              name="firstname"
-                              placeholder="type firstname here"
+                              name="coursename"
+                              placeholder="type coursename here"
                             ></input>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">Enter Last Name</th>
+                          <th scope="row">Enter author name</th>
                           <td>
                             <input
                               type="text"
                               onChange={(e) => {
-                                setlastname(e.target.value);
+                                setauthor(e.target.value);
                               }}
                               className="form-control mt-1"
-                              name="lastname"
-                              placeholder="type lastname here"
+                              name="author"
+                              placeholder="type author here"
                             ></input>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">Enter the email</th>
+                          <th scope="row">Enter description</th>
                           <td>
                             {" "}
                             <input
-                              type="email"
+                              type="text"
                               onChange={(e) => {
-                                setemail(e.target.value);
+                                setcoursedetail(e.target.value);
                               }}
                               className="form-control mt-1"
-                              name="email"
-                              placeholder="type email here"
+                              name="coursedetail"
+                              placeholder="type coursedetail here"
                             ></input>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">Enter the password</th>
+                          <th scope="row">Enter the credit</th>
                           <td>
                             {" "}
                             <input
-                              type="password"
+                              type="text"
                               onChange={(e) => {
-                                setpassword(e.target.value);
+                                setcredit(e.target.value);
                               }}
                               className="form-control mt-1"
-                              name="password"
-                              placeholder="type password here"
+                              name="credit"
+                              placeholder="type credit here"
                             ></input>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Gender</th>
-                          <td colSpan={-2}>
-                            {" "}
-                            <input
-                              type="radio"
-                              value={"male"}
-                              name="main"
-                              onChange={(e) => setgender(e.target.value)}
-                              className="form-check-input"
-                            />
-                            Male{" "}
-                            <input
-                              type="radio"
-                              name="main"
-                              value={"female"}
-                              onChange={(e) => setgender(e.target.value)}
-                              className="form-check-input"
-                            />
-                            Female
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Select the course</th>
-                          <td>
-                          <select
-                              class="form-select"
-                              aria-label="Default select example"
-                              onChange={(e) => setcourse(e.target.value)}
-                            >
-                              <option selected>Select the course</option>
-                              <option value="ST DOMAIN">ST DOMAIN</option>
-                              <option value="MACHINE LEARNING">MACHINE LEANING</option>
-                              <option value="CLOUD DOMAIN">CLUOD DOMAIN</option>
-                              <option value="AR AND VR">AR AND VR</option>
-                            </select>
-                           
                           </td>
                         </tr>
                       </tbody>
@@ -436,4 +372,4 @@ function Student() {
     </div>
   );
 }
-export default Student;
+export default Course;
