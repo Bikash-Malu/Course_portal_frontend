@@ -117,7 +117,6 @@ function Course() {
                 <td>{item.credit}</td>
                 {/* <td>{item.credit}</td> */}
              
-
                 <td>
                   <button
                     className="btn btn-danger"
