@@ -4,7 +4,7 @@ import { Routes, Route} from 'react-router-dom';
 import About from './Components/About';
 import Service from './Components/Service';
 import './App.css';
-import Login from './Components/Login';
+// import Login from './Components/Login';
 import Banner from './Components/Banner';
 import Home from './Components/Dashboard/Home';
 import Subject from './Components/Dashboard/Subject';
@@ -40,12 +40,9 @@ function App() {
     </Route>
     <Route path="/service" element={<Service title="Courses"/>}>
     </Route>
-    <Route path="/contact" element={<Login title="Login"/>}>
-    </Route>
  
-    
-    <Route path="/login" element={<Login title="login"/>}>
-    </Route>
+ 
+
     <Route path="/" element={<Banner title="Welcome to Student Subject Registration"/>}/>
     <Route path="/dashboard" element={<Sidebar title="dashbaord"/>}/>
     <Route path="/log" element={<Resister title="login"/>}/>
