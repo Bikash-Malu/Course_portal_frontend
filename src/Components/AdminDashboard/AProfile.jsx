@@ -26,7 +26,7 @@ const AProfile = () => {
               <tbody>
                 <tr>
                   <th scope="row">Name</th>
-                  <td>BIAKSH MALU</td>
+                  <td>BIKASH MALU</td>
                  
                 </tr>
                 <tr>
@@ -42,6 +42,7 @@ const AProfile = () => {
               </tbody>
             </table>
           </div>
+          <div className="card-footer"></div>
         </div>
       </div>
     </div>

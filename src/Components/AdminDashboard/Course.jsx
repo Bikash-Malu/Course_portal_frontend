@@ -155,9 +155,9 @@ function Course() {
                   <h5 className="modal-title" id="exampleModalLabel">
                     <center>
                       <img
-                        src="https://w7.pngwing.com/pngs/17/243/png-transparent-computer-icons-arshad-ayub-graduate-business-school-students-miscellaneous-logo-monochrome.png"
+                        src="https://atlas-content-cdn.pixelsquid.com/stock-images/textbooks-book-Va7kewA-600.jpg"
                         alt=""
-                        height={"100px"}
+                        height={"150px"}
                         width={"30px"}
                         style={{ marginLeft: "120px" }}
                       />
@@ -246,7 +246,7 @@ function Course() {
           <center>
             <button
               type="button"
-              className="btn btn-primary"
+              className="btn btn-warning"
               data-toggle="modal"
               data-target="#exampleModal1"
             >
@@ -267,9 +267,9 @@ function Course() {
                   <h5 className="modal-title" id="exampleModalLabel">
                     <center>
                       <img
-                        src="https://w7.pngwing.com/pngs/17/243/png-transparent-computer-icons-arshad-ayub-graduate-business-school-students-miscellaneous-logo-monochrome.png"
+                        src="https://atlas-content-cdn.pixelsquid.com/stock-images/textbooks-book-Va7kewA-600.jpg"
                         alt=""
-                        height={"100px"}
+                        height={"150px"}
                         width={"30px"}
                         style={{ marginLeft: "120px" }}
                       />
@@ -360,9 +360,9 @@ function Course() {
                   >
                     Close
                   </button>
-                  <Button color="warning" type="submit" onClick={save}>
+                  <button className='btn btn-warning'color="warning" type="submit" onClick={save}>
                     save here
-                  </Button>
+                  </button>
                 </div>
               </div>
             </div>
