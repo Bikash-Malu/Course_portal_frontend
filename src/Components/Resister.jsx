@@ -98,7 +98,7 @@ function Resister(props) {
         <div className="card bg-dark text-white">
           <div className="card-body text-center">
             <div className="mb-md-5  ">
-              <h2 className="fw-bold mb-2 text-uppercase" >Login</h2>
+              <h2 className="fw-bold mb-2 text-uppercase" style={{color:'white'}}>Login</h2>
               <p style={{fontSize:'20px'}} className="text-white-50 mb-5">Please enter your email and password!</p>
              <br/> <label className="form-label">Email</label>
               <div className="form-outline form-white mb-4">

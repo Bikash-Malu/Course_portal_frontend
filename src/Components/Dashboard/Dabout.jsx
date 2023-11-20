@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Sidebar from '../Sidebar'
+import './Dabout.css'
 const Dabout = (props) => {
   const [firstname, setfirstname] = useState("");
   const [lastname, setlastname] = useState("");
@@ -35,41 +36,33 @@ const Dabout = (props) => {
       
       
       <div className='container'>
-       
-       
-      <table class="table table-dark table-striped-columns mt-4 text-center">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">1</th>
-      
-    </tr>
-  </thead>
- 
-  <tbody>
-    <tr>
-      <th scope="row">First Name</th>
-      <th scope="row">Bikash</th>
-     
-    </tr>
-    <tr>
-      <th scope="row">Last Name</th>
-      <th scope="row">Malu</th>
-     
-    </tr>
-    <tr>
-      <th scope="row">Email</th>
-      <td colspan="2">bikashmalu1@gmail.com</td>
-      
-    </tr>
-    <tr>
-      <th scope="row">password</th>
-      <td colspan="2">Bikash</td>
-      
-    </tr>
-  </tbody>
-</table>
 
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlPFtcI6KH7WhuyjiiRrG56_Ct6XIzrKs_8YVQt-ishGtAqmkI0hUEePTi7RZlnQMM9so&usqp=CAU" alt="Profile Picture" height={'130px'} width={'150px'}/>
+            <h1>BIKASH MALU</h1>
+            <h5 style={{color:'black'}}>Email:-Bikashmalu1@gmail.com</h5>
+        </div>
+        <div class="profile-body">
+            <section>
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </section>
+            <section>
+                <h2 className='mb-2'>Course</h2>
+                <ul style={{cursor:'default'}}>
+                    <li className='btn btn-warning'>HTML5</li>
+                    <li className='btn btn-warning' >CSS3</li>
+                    <li className='btn btn-warning'>JavaScript</li>
+                    <li className='btn btn-warning'>React</li>
+                </ul>
+            </section>
+        </div>
+        <div class="profile-footer">
+            <p>Contact: user@example.com</p>
+          
+        </div>
+    </div>
       </div>
     </div>
   )
